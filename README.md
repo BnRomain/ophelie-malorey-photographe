@@ -15,7 +15,7 @@ Beyond the design, the site carries a complete **SEO and GEO** layer (generative
 
 | Context | Client | Design and development |
 | --- | --- | --- |
-| Freelance project delivered under the [OptimizIA.xyz](https://www.optimizia.xyz) brand, February to June 2026 | Ophélie Malorey, photographer, Toulouse (Occitanie) | Romain Ben |
+| Freelance project delivered under the [OptimizIA.xyz](https://www.optimizia.xyz) brand, February to June 2025 | Ophélie Malorey, photographer, Toulouse (Occitanie) | Romain Ben |
 
 🌐 **Live site:** [bnromain.github.io/ophelie-malorey-photographe](https://bnromain.github.io/ophelie-malorey-photographe/)
 
