@@ -1,0 +1,31 @@
+version: 2
+
+# Tracked dependencies: the linters pinned in package.json (development only,
+# the site itself has no dependency) and the GitHub Actions used by the workflows.
+
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      npm-patch-minor:
+        update-types:
+          - "patch"
+          - "minor"
+        patterns:
+          - "*"
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      actions-patch-minor:
+        update-types:
+          - "patch"
+          - "minor"
+        patterns:
+          - "*"

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/BnRomain/ophelie-malorey-photographe/security/advisories/new
+    about: Please report vulnerabilities privately instead of opening a public issue.
+  - name: Documentation (wiki)
+    url: https://github.com/BnRomain/ophelie-malorey-photographe/wiki
+    about: How the site is built, the SEO and GEO work, getting started and CI.

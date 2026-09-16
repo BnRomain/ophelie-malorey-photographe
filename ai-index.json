@@ -2,7 +2,7 @@
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Ophélie Malorey - Photographe",
-    "url": "https://bnromain.github.io/SitePhoto_Ophelie/",
+    "url": "https://bnromain.github.io/ophelie-malorey-photographe/",
     "inLanguage": "fr",
     "isMachineReadable": true,
     "about": {
@@ -20,8 +20,8 @@
         "photographie de mariage"
     ],
     "machineReadableEndpoints": {
-        "llms": "/SitePhoto_Ophelie/llms.txt",
-        "entities": "/SitePhoto_Ophelie/entities.json",
-        "sitemap": "/SitePhoto_Ophelie/sitemap.xml"
+        "llms": "/ophelie-malorey-photographe/llms.txt",
+        "entities": "/ophelie-malorey-photographe/entities.json",
+        "sitemap": "/ophelie-malorey-photographe/sitemap.xml"
     }
 }

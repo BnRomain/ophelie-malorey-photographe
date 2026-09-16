@@ -1,0 +1,59 @@
+name: Bug report
+description: Report a display problem, a broken interaction or a problem in the documentation.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a bug.
+        Please do not report security vulnerabilities here: follow the [security policy](https://github.com/BnRomain/ophelie-malorey-photographe/security/policy) instead.
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - "Layout and styles (css/style.css)"
+        - "Interactions: navigation, reveal animations, lightbox (js/main.js)"
+        - "Content and structure (index.html, mentions-legales.html)"
+        - "SEO, GEO and metadata (sitemap.xml, robots.txt, llms.txt, JSON-LD)"
+        - "Images (assets/images/)"
+        - "CI / GitHub Actions"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened, and what did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: The page, the section and the actions that trigger the problem.
+      placeholder: |
+        1. Open https://bnromain.github.io/ophelie-malorey-photographe/ on a phone
+        2. Scroll to "Oeuvres et travaux" and tap a photo
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or console output
+      description: Drag and drop screenshots here, or paste the messages of the browser console.
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Device, operating system and browser with its version.
+      placeholder: "iPhone 15, iOS 18, Safari"
+    validations:
+      required: true

@@ -1,0 +1,86 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  # Validates the HTML pages and lints the stylesheet and the script with the
+  # versions pinned in package.json.
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate the HTML with html-validate
+        run: npm run lint:html
+
+      - name: Lint the CSS with stylelint
+        run: npm run lint:css
+
+      - name: Lint the JavaScript with ESLint
+        run: npm run lint:js
+
+  # Checks that the site is consistent: valid JSON and sitemap, every local
+  # file referenced by the pages and the sitemap exists, a single site URL,
+  # and images that stay under the weight budget.
+  site:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+
+      - name: Check the site files
+        run: node scripts/check-site.mjs | tee check-site.log
+
+      - name: Publish the page weight
+        if: always()
+        run: |
+          {
+            echo "## Site check"
+            echo
+            echo '```text'
+            cat check-site.log
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  docs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Lint Markdown with markdownlint
+        uses: DavidAnson/markdownlint-cli2-action@v24
+        with:
+          globs: "**/*.md"
+
+      # Offline mode checks the links to repository files, the heading anchors
+      # and the images without depending on the availability of external sites.
+      - name: Check links, anchors and images with lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --offline --include-fragments --no-progress .
+          jobSummary: true

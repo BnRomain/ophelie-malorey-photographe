@@ -1,0 +1,29 @@
+{
+  "name": "ophelie-malorey-photographe",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "One-page portfolio website of Ophelie Malorey, photographer in Toulouse (vanilla HTML, CSS and JavaScript).",
+  "homepage": "https://bnromain.github.io/ophelie-malorey-photographe/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BnRomain/ophelie-malorey-photographe.git"
+  },
+  "license": "MIT",
+  "author": "Romain Ben",
+  "scripts": {
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:js",
+    "lint:html": "html-validate index.html mentions-legales.html",
+    "lint:css": "stylelint \"css/**/*.css\"",
+    "lint:js": "eslint js scripts",
+    "check": "node scripts/check-site.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "eslint": "10.10.0",
+    "globals": "17.12.0",
+    "html-validate": "11.16.0",
+    "stylelint": "17.15.0",
+    "stylelint-config-standard": "40.0.0"
+  }
+}
