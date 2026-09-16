@@ -1,6 +1,6 @@
 /* SITE */
 Nom: Ophélie Malorey - Photographe
-URL: https://bnromain.github.io/SitePhoto_Ophelie/
+URL: https://bnromain.github.io/ophelie-malorey-photographe/
 Standards: HTML5, CSS3, JavaScript, JSON-LD, llms.txt
 Composants: HTML/CSS/JS vanilla, sans dépendance externe
 

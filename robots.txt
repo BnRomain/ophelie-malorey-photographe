@@ -15,4 +15,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://bnromain.github.io/SitePhoto_Ophelie/sitemap.xml
+Sitemap: https://bnromain.github.io/ophelie-malorey-photographe/sitemap.xml

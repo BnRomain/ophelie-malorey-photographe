@@ -1,6 +1,7 @@
 # Projet : Site Ophélie Malorey — Photographe
 
 ## Description
+
 Site vitrine one-page pour Ophélie Malorey, photographe basée à Toulouse.
 Le design s'inspire directement de la maquette PDF fournie.
 
@@ -17,7 +18,7 @@ Le design s'inspire directement de la maquette PDF fournie.
 
 ## Structure des fichiers
 
-```
+```text
 /
 ├── index.html            # Page unique
 ├── css/
@@ -49,17 +50,20 @@ Le design s'inspire directement de la maquette PDF fournie.
 ## Charte graphique (extraite de la maquette)
 
 ### Couleurs
+
 - **Fond principal** : olive foncé / doré sombre (~`#6B6B20` ou similaire, à affiner depuis la maquette)
 - **Texte principal** : noir `#000000` ou brun très foncé
 - **Texte clair** : blanc cassé pour les zones sombres
 - **Accents** : noir pour les encadrés et sections contrastées
 
 ### Typographie
+
 - **Titres** : police serif élégante, espacement large (style éditorial), uppercase avec letter-spacing
 - **Corps de texte** : police serif lisible, style italique pour les descriptions
 - **Style général** : élégant, aéré, minimaliste, artistique
 
 ### Images
+
 - Mélange de photos **noir & blanc** et **couleur**
 - Photos encadrées avec bordures ou ombres subtiles selon la maquette
 - Photos témoignages : rondes (border-radius: 50%)
@@ -69,6 +73,7 @@ Le design s'inspire directement de la maquette PDF fournie.
 ## Règles de codage
 
 ### HTML
+
 - Utiliser des balises sémantiques : `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`
 - Chaque section a un `id` correspondant pour la navigation interne
 - Les images ont toujours un attribut `alt` descriptif
@@ -77,6 +82,7 @@ Le design s'inspire directement de la maquette PDF fournie.
 - Viewport meta pour le responsive
 
 ### CSS
+
 - Pas de CSS inline dans le HTML
 - Utiliser des custom properties (variables CSS) pour les couleurs et les fonts
 - Mobile-first : les media queries partent du mobile vers le desktop
@@ -86,6 +92,7 @@ Le design s'inspire directement de la maquette PDF fournie.
 - Animations et transitions en CSS quand possible (pas de JS pour les animations simples)
 
 ### JavaScript
+
 - Vanilla JS uniquement, pas de dépendances externes
 - Mode strict (`'use strict';`)
 - Utilisé uniquement pour : smooth scroll, animations au scroll (Intersection Observer), interactions UI
@@ -93,6 +100,7 @@ Le design s'inspire directement de la maquette PDF fournie.
 - Le site doit être **fonctionnel sans JavaScript** (progressive enhancement)
 
 ### Responsive
+
 - Breakpoints :
   - Mobile : < 768px
   - Tablette : 768px — 1024px
@@ -101,11 +109,13 @@ Le design s'inspire directement de la maquette PDF fournie.
 - La navigation s'adapte (menu hamburger sur mobile si nécessaire)
 
 ### Performance
+
 - Images optimisées (formats modernes si possible : WebP avec fallback)
 - Lazy loading sur les images hors viewport (`loading="lazy"`)
 - CSS et JS minifiés pour la production (mais on travaille sur les fichiers non minifiés)
 
 ### Accessibilité
+
 - Contraste suffisant entre texte et fond
 - Navigation au clavier possible
 - Attributs ARIA si nécessaire
