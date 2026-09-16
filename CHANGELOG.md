@@ -31,7 +31,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [1.0.0] - 2026-06-12
 
-Version delivered to the client after the SEO and GEO pass.
+Version delivered to the client after the SEO and GEO pass. The site itself was designed and built in 2025.
 
 ### Added
 
