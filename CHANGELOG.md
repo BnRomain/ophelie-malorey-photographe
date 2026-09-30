@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Fixed
+
+- Mobile (768 px and below): the flower divider no longer covers the "Collaborons" button and the "Mon travail" title, its -6rem overlap was wider than the 60 px section padding
+
 ## [1.1.0] - 2026-09-16
 
 ### Changed

@@ -1567,6 +1567,12 @@ button {
         justify-content: center;
     }
 
+    /* Flower divider mobile: the -6rem overlap is wider than the 60px section padding here */
+    .fleur-decoration {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
     /* About mobile */
     .about .container {
         grid-template-columns: 1fr;
